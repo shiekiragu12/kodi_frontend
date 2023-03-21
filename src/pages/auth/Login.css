@@ -60,7 +60,7 @@
 }
 .forgotPassword {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   padding: 0px 0px 25px 20px; /*top right bottom left*/
   font-size: 18px;
   font-weight: bold;

@@ -1,0 +1,36 @@
+.image-container {
+    position: relative;
+    
+  }
+  
+  .imageHome {
+    width: 100% !important;
+    height: 50vh;
+    overflow: hidden;
+}
+  
+.image-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 55px;
+    background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,1));
+} 
+.wave {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #ffffff;
+    border-radius: 8% / 22px;
+    transform: rotate(-2deg);
+}
+.main-content,h2 .p{
+    letter-spacing: 1px;
+    font-family: sans-serif;
+    color: dimgray;
+}

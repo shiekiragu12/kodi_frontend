@@ -8,6 +8,7 @@ function Register() {
     fullname: "",
     email: "",
     phoneNumber: "",
+    gender: "",
     password: "",
     confirmPassword: "",
   });
@@ -24,7 +25,13 @@ function Register() {
 
   //submit user details fuction
   function handleSubmit(e) {
+    // prevent form from redirecting to another page
     e.preventDefault();
+
+    //check if password and confirm password match
+    if (formData.password !== formData.confirmPassword)
+      return alert("passwords dont match");
+
     console.log(formData);
 
     // try {
@@ -34,7 +41,7 @@ function Register() {
     //       full_name: formData.fullname,
     //       phone_number: formData.phoneNumber,
     //       password: formData.password,
-    //       gender: "Male",
+    //       gender: formData.gender,
     //     })
     //     .then((res) => {
     //       axios
@@ -102,6 +109,28 @@ function Register() {
         >
           {digitCount}/10
         </p>
+        <div className="genderRadio">
+          <div className="radioProperty">
+            <input
+              type="radio"
+              name="gender"
+              id="male"
+              value="male"
+              onChange={handleChange}
+            />
+            <label htmlFor="male">Male</label>
+          </div>
+          <div className="radioProperty">
+            <input
+              type="radio"
+              name="gender"
+              id="female"
+              value="female"
+              onChange={handleChange}
+            />
+            <label htmlFor="female">Female</label>
+          </div>
+        </div>
         <div className="input-icons">
           <i className="fa fa-lock icon"></i>
           <input

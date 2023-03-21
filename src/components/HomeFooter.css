@@ -1,18 +1,18 @@
-.footer{
-    place-content: space-around !important;
+.footer {
+  position: absolute;
+
+  width: 100%;
 }
 .sign_up {
-    color: black;
-    background-color: lightgray;
-    border: none;
-    border-radius: 60px;
-    width: 10%;
-    padding: 1rem;
+  color: black;
+  background-color: lightgray;
+  border-radius: 60px;
+  width: 12%;
+  padding: 5px;
 }
 .login {
-    border: none;
-    border-radius: 60px;
-    width: 10%;
-    padding: 1rem;
-    background-color: #0e88ff;
+  border-radius: 60px;
+  width: 12%;
+  background-color: #0e88ff;
+  padding: 5px;
 }

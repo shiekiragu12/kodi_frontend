@@ -51,12 +51,22 @@ label {
   position: relative;
   border: 1px solid grey;
   padding: 10px;
-  width: 30rem;
+  width: 30vw;
   border-radius: 17px;
   color: grey;
+}
+.privatePolicy {
+  color: orange;
 }
 
 input[type="radio"]:checked + label {
   color: aquamarine;
   border: 1px solid aquamarine;
+}
+
+.nextBtn {
+  width: 70vw;
+  height: 8vh;
+  border-radius: 30px;
+  background-color: blue;
 }

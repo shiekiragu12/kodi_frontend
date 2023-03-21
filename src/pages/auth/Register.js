@@ -1,6 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./Register.css";
+import { Link } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
 
 function Register() {
@@ -155,8 +156,22 @@ function Register() {
             required
           />
         </div>
-        <Button variant="primary" type="submit">
-          Submit
+        <div className="termsAndConditions">
+          <h6>By creating an account, you are agreeing to our</h6>
+
+          <h6>
+            <Link to="/" className="terms">
+              Terms & Conditions
+            </Link>{" "}
+            and
+            <Link to="/" className="privatePolicy">
+              {" "}
+              Privacy Policy
+            </Link>
+          </h6>
+        </div>
+        <Button variant="primary" type="submit" className="nextBtn">
+          Next
         </Button>
 
         {/* Full names */}

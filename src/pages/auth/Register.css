@@ -1,3 +1,16 @@
+.custom-back-button {
+  float: left;
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  background-color: rgb(196, 195, 195);
+}
+
+.custom-back-button::before {
+  content: "<";
+  font-size: 25px;
+  font-weight: bold;
+}
 .input-icons i {
   position: absolute;
 }
@@ -17,7 +30,7 @@
 }
 
 .input-field,
-.input-field:active {
+.input-field:focus {
   width: 100%;
   padding: 10px;
   text-align: start;

@@ -54,6 +54,7 @@ function Register() {
 
   return (
     <div>
+      <div className="custom-back-button" />
       <h2>Create an account with Kodi</h2>
       <p className="text-muted">Best tool to manage your property</p>
       <Form onSubmit={handleSubmit}>

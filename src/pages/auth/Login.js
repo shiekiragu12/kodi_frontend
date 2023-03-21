@@ -1,8 +1,8 @@
 import { useState } from "react";
-import axios from "axios";
 import "./Login.css";
 import { Link } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
+import { serverUrl } from "../../serverUrl";
 
 function Login() {
   const [formData, setFormData] = useState({
@@ -31,18 +31,18 @@ function Login() {
 
     console.log(formData);
 
-    // try {
-    //   axios
-    //     .post("https://kodinyumba.app/api/users/login/", {
-    //       phone_number: formData.phoneNumber,
-    //       password: formData.password,
-    //     })
-    //     .then((res) => {
-    //       window.location = "/login";
-    //     });
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    try {
+      serverUrl
+        .post("/users/login/", {
+          phone_number: formData.phoneNumber,
+          password: formData.password,
+        })
+        .then((res) => {
+          window.location = "/login";
+        });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (

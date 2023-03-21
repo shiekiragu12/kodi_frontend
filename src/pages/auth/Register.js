@@ -1,8 +1,8 @@
 import { useState } from "react";
-import axios from "axios";
 import "./Register.css";
 import { Link } from "react-router-dom";
 import { Form, Button } from "react-bootstrap";
+import { serverUrl } from "../../serverUrl";
 
 function Register() {
   const [formData, setFormData] = useState({
@@ -35,28 +35,28 @@ function Register() {
 
     console.log(formData);
 
-    // try {
-    //   axios
-    //     .post("https://kodinyumba.app/api/users/register/", {
-    //       email: formData.email,
-    //       full_name: formData.fullname,
-    //       phone_number: formData.phoneNumber,
-    //       password: formData.password,
-    //       gender: formData.gender,
-    //     })
-    //     .then((res) => {
-    //       axios
-    //         .post("https://kodinyumba.app/api/users/login/", {
-    //           phone_number: formData.phoneNumber,
-    //           password: formData.password,
-    //         })
-    //         .then((res) => {
-    //           window.location = "/login";
-    //         });
-    //     });
-    // } catch (error) {
-    //   console.log(error);
-    // }
+    try {
+      serverUrl
+        .post("/users/register/", {
+          email: formData.email,
+          full_name: formData.fullname,
+          phone_number: formData.phoneNumber,
+          password: formData.password,
+          gender: formData.gender,
+        })
+        .then((res) => {
+          serverUrl
+            .post("/users/login/", {
+              phone_number: formData.phoneNumber,
+              password: formData.password,
+            })
+            .then((res) => {
+              window.location = "/login";
+            });
+        });
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (

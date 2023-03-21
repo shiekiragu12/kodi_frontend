@@ -1,3 +1,5 @@
+@import "../../index.css";
+
 .custom-back-button {
   width: 45px;
   height: 45px;
@@ -60,8 +62,8 @@ label {
 }
 
 input[type="radio"]:checked + label {
-  color: aquamarine;
-  border: 1px solid aquamarine;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 
 .nextBtn {

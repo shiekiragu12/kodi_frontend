@@ -1,8 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 import "./Register.css";
-import { Form, Button, Row, Col } from "react-bootstrap";
-import { FaUser } from "react-icons/fa";
+import { Form, Button } from "react-bootstrap";
 
 function Register() {
   const [formData, setFormData] = useState({

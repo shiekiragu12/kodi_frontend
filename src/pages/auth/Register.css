@@ -1,9 +1,9 @@
 .custom-back-button {
-  float: left;
   width: 45px;
   height: 45px;
   border-radius: 50px;
   background-color: rgb(196, 195, 195);
+  margin: 5px 0px 2px 10px; /* top | right | bottom | left */
 }
 
 .custom-back-button::before {
